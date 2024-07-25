@@ -13,6 +13,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Calendly widget script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     <!-- Custom JavaScript -->
     <script src="scripts.js"></script>
 </head>
@@ -174,8 +176,13 @@
     <br>
     <!-- Contact section for Calendly -->
     <div class="text-center">
-    <button type="button" class="btn btn-primary text-center" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/unifiedtechrepairs'}); return false;">
-    Schedule your free consultation today</button>    
+        <!-- Button with aria-label for accessibility -->
+        <button type="button" class="btn btn-primary text-center" 
+                aria-label="Schedule your free consultation today" 
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/unifiedtechrepairs'}); return false;">
+            Schedule your free consultation today
+        </button>
+    </div>
     <br>
     <br>
     <br>
