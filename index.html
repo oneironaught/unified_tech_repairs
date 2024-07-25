@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Tech Repair</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/986e342f6d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#home">Home</a>
+                            <a class="dropdown-item" href="#services">Services</a>
+                            <a class="dropdown-item" href="#testimonials">Testimonials</a>
+                            <a class="dropdown-item" href="#about">About Us</a>
+                            <a class="dropdown-item" href="#contact">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="logo.png" alt="Unified Tech Repair Logo" height="50">
+                </a>
+            </div>
+
+            <ul class="nav-item">
+                <a class="nav-link" href="https://twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link" href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link" href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link" href="https://youtube.com" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link" href="https://tiktok.com" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </ul>
+        </ul>
+    </div>
+</div>
+    </header>
+
+    <section id="home" class="text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Unified Tech Repair</h1>
+            <p class="lead">We specialize in iPhone and Mac computer repairs. Your satisfaction is our priority.</p>
+        </div>
+    </section>
+
+    <section id="services" class="text-center py-5 bg-light">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 service-item" data-service="screen-replacement">
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                    <h3>iPhone Screen Replacement</h3>
+                    <p class="service-description" id="screen-replacement">Quick and reliable iPhone screen replacement using high-quality parts.</p>
+                </div>
+                <div class="col-md-4 service-item" data-service="battery-replacement">
+                    <i class="fas fa-battery-half fa-3x"></i>
+                    <h3>Battery Replacement</h3>
+                    <p class="service-description" id="battery-replacement">Ensure your device stays powered longer and performs better with our battery replacement service.</p>
+                </div>
+                <div class="col-md-4 service-item" data-service="macbook-repair">
+                    <i class="fas fa-laptop fa-3x"></i>
+                    <h3>MacBook Repair</h3>
+                    <p class="service-description" id="macbook-repair">Expert MacBook repair services for any hardware or software issue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="text-center py-5">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="testimonial-text">"Unified Tech Repair fixed my iPhone screen in no time. Excellent service and very professional!"</p>
+                        <p class="testimonial-author">- Jane Doe</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"I had battery issues with my MacBook, and they replaced it quickly. Highly recommend!"</p>
+                        <p class="testimonial-author">- John Smith</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"Great customer service and fast repair times. I will definitely come back if I need any other repairs."</p>
+                        <p class="testimonial-author">- Sarah Lee</p>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="text-center py-5">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Unified Tech Repair has been serving the community with reliable and efficient repair services for over 10 years.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center py-5 bg-light">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Unified Tech Repair. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

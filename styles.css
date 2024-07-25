@@ -1,0 +1,80 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+header .navbar-brand {
+    font-weight: bold;
+}
+
+header .navbar-brand img {
+    display: block;
+    margin: 0 auto;
+}
+
+header .navbar-nav .nav-link {
+    color: #555;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+#home {
+    background-image: url('https://via.placeholder.com/1920x800');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 70px;
+}
+
+#home .display-4 {
+    font-weight: bold;
+    margin-top: 20%;
+}
+
+#services .col-md-4 {
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+#services .fa-3x {
+    color: #007bff;
+    margin-bottom: 1em;
+}
+
+.service-description {
+    display: none;
+    margin-top: 1em;
+}
+
+#testimonials .carousel-inner {
+    margin-top: 2em;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact button {
+    background-color: #007bff;
+    border: none;
+    padding: 0.5em 2em;
+    color: white;
+}
