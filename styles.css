@@ -1,3 +1,5 @@
+
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: black;
@@ -26,17 +28,27 @@ header .navbar-nav .nav-link:hover {
     color: #007bff;
 }
 
+.navbar-nav .nav-link:hover, .navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #007bff; /* Sets the text color on hover */
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+    background-color: #007bff; /* Sets the background color on hover for dropdown items */
+    color: white; /* Sets the text color on hover for dropdown items */
+}
+
 #home {
     background-image: url('assets/logo_top.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 #home .display-4 {
     font-weight: bold;
-    margin-top: 20%;    
+    margin-top: 3%;
+    padding-top: 400px;
 }
 
 #services .col-md-4 {
