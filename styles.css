@@ -39,6 +39,8 @@ header .navbar-nav .nav-link:hover {
 
 #home {
     background-image: url('assets/logo_top.jpeg');
+    max-width: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
     color: white;
@@ -93,4 +95,43 @@ header .navbar-nav .nav-link:hover {
 
 .footer {
     background-color: #f8f9fa;
+}
+
+/* Media Queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .navbar-nav {
+        margin-right: auto;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .navbar {
+        font-size: 0.9rem;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    #introduction, #services, #testimonials, #about, #contact {
+        padding: 20px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        margin-left: 0;
+    }
+
+    .service-item {
+        padding: 10px;
+    }
 }
