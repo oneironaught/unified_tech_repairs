@@ -39,3 +39,29 @@ document.addEventListener('DOMContentLoaded', function() {
         form.classList.add('was-validated');
     }, false);
 });
+
+// Define where you want to send the data.
+const url = 'https://yourserver.com/api/contact'; // Change this URL to your actual endpoint
+
+// Create an object to send in JSON format
+const formData = {
+    name: name,
+    email: email,
+    message: message
+};
+
+// Use fetch API to send the form data
+fetch(url, {
+    method: 'POST', // or 'PUT'
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData)
+})
+.then(response => response.json()) // or .text() if you expect a plain response
+.then(data => {
+    console.log('Success:', data);
+})
+.catch((error) => {
+    console.error('Error:', error);
+});
