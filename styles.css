@@ -90,3 +90,7 @@ header .navbar-nav .nav-link:hover {
     padding: 0.5em 2em;
     color: white;
 }
+
+.footer {
+    background-color: #f8f9fa;
+}
