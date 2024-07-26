@@ -1,4 +1,15 @@
+section {
+    padding-top: 100px; /* Adjust based on your navbar's height */
+    margin-top: -100px; /* Same value as padding-top but negative */
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+section:target {
+    padding-top: 100px;
+}
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

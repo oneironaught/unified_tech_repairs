@@ -1,3 +1,20 @@
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor behavior
+
+        const targetId = this.getAttribute(href="#services"); // Get the target ID from href
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 100; // 100px is the navbar height
+            window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for navigation links
     document.querySelectorAll('a.nav-link').forEach(anchor => {
