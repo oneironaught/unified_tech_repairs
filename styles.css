@@ -92,6 +92,10 @@ header .navbar-nav .nav-link:hover {
     margin-top: 1em;
 }
 
+.carousel-item img {
+    width: 100%;
+    height: auto;  /* Adjust height as needed, or use 'vh' for viewport height */
+}
 
 #testimonials .carousel-inner {
     margin-top: 2em;
