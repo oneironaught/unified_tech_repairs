@@ -64,7 +64,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <div class="container">
-                        <a class="nav-link" href="https://x.com/UTRepairs" style="color: lightblue" target="_blank" aria-label="Twitter Logo">
+                        <a class="nav-link" href="https://x.com/UTRepairs" style="color: lightblue" target="_blank" aria-label="Twitter Logo" alt="Twitter Logo">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                         </div>
@@ -244,13 +244,81 @@
 <div id="imageCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="path_to_your_image1.jpg" class="d-block w-100" alt="Image One">
+            <img src="assets/iphone_liquid.jpeg" class="d-block w-100" alt="Image One" onclick="enlargeImage(this);">
+            <div class="carousel-caption">
+                <h3>iPhone with liquid damage</h3>
+                <p>This device required replacement due to liquid damage</p>
+            </div>
         </div>
         <div class="carousel-item">
-            <img src="path_to_your_image2.jpg" class="d-block w-100" alt="Image Two">
+            <img src="assets/macbook_pro_liquid_1.jpeg" class="d-block w-100" alt="Image Two" onclick="enlargeImage(this);">
+            <div class="carousel-caption">
+                <h3>Macbook Pro</h3>
+                <p>This device required a rebuild</p>
+            </div>
         </div>
         <div class="carousel-item">
-            <img src="path_to_your_image3.jpg" class="d-block w-100" alt="Image Three">
+            <img src="assets/macbook_pro_liquid_2.jpeg" class="d-block w-100" alt="Image Three" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/mac_pro.jpeg" class="d-block w-100" alt="Image Four" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/dfu_restore_failed.jpeg" class="d-block w-100" alt="Image Five" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/MBP_topcase_repair.jpeg" class="d-block w-100" alt="Image Six" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/macbookair_7.jpeg" class="d-block w-100" alt="Image Seven" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/macbookair_mlb_8.jpeg" class="d-block w-100" alt="Image Eight" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/macbookair_2017_9.jpeg" class="d-block w-100" alt="Image Nine" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/MBP_topcase_10.jpeg" class="d-block w-100" alt="Image Ten" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/MBP_swollen_11.jpeg" class="d-block w-100" alt="Image Eleven" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/imac_repair_12.jpeg" class="d-block w-100" alt="Image Twelve" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/TCL_repair_13.jpeg" class="d-block w-100" alt="Image Thirteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/TCL_repair_14.jpeg" class="d-block w-100" alt="Image Fourteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_kenelpanic_15.jpeg" class="d-block w-100" alt="Image Fifteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_lci_16.jpeg" class="d-block w-100" alt="Image Sixteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/ipad_cracked_17.JPG" class="d-block w-100" alt="Image Seventeen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/ipad_teardown_18.JPG" class="d-block w-100" alt="Image Eighteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/ipad_fixed_19.JPG" class="d-block w-100" alt="Image Nineteen" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_display_20.JPG" class="d-block w-100" alt="Image Twenty" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_fixed_21.JPG" class="d-block w-100" alt="Image Twenty-one" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_rear_22.JPG" class="d-block w-100" alt="Image Twenty-two" onclick="enlargeImage(this);">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/iphone_rear_23.JPG" class="d-block w-100" alt="Image Twenty-three" onclick="enlargeImage(this);">
         </div>
     </div>
     <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
@@ -261,6 +329,23 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+    <div id="enlargedBackdrop" onclick="closeEnlargedImage();">
+        <img id="enlargedImg" alt="Enlarged Image">
+    </div>
+    
+    <script>
+    function enlargeImage(img) {
+        var src = img.src;
+        var backdrop = document.getElementById('enlargedBackdrop');
+        var enlargedImg = document.getElementById('enlargedImg');
+        enlargedImg.src = src; // Set the source for the enlarged image
+        backdrop.style.display = "block"; // Show the backdrop
+    }
+    
+    function closeEnlargedImage() {
+        document.getElementById('enlargedBackdrop').style.display = "none";
+    }
+    </script>
 </div>
 <br>
 <br>

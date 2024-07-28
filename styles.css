@@ -92,9 +92,49 @@ header .navbar-nav .nav-link:hover {
     margin-top: 1em;
 }
 
-.carousel-item img {
+
+
+.carousel-caption {
+    position: relative;
+    display: inline-block;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    right: inherit;
+    bottom: inherit;
+    transform: translate(-50%, -50%); /* Offset the position by half of the element's width and height */
+    width: 50%; /* Full width of the image */
+    color: white; /* Text color */
+    text-align: center; /* Center text alignment */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 100px; /* Padding for text */
+}
+
+#imageCarousel {
+    width: 50%;  /* Adjust the width as needed */
+    margin: 0 auto; /* Center the carousel if it's not full width */
+    max-height: 400px; /* Set a maximum height */
+    overflow: hidden; /* Prevents images from overflowing the set height */
+    display: block;
+}
+
+#enlargedBackdrop {
+    display: none;
+    position: fixed;
+    z-index: 1050; /* Bootstrap modal z-index starts from 1040, so above that */
+    left: 0;
+    top: 0;
     width: 100%;
-    height: auto;  /* Adjust height as needed, or use 'vh' for viewport height */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+#enlargedImg {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Adjust based on the size you need */
+    max-height: 80%; /* Adjust based on the size you need */
+    margin-top: 5%;
 }
 
 #testimonials .carousel-inner {
