@@ -1,8 +1,3 @@
-section {
-    padding-top: 100px; /* Adjust based on your navbar's height */
-    margin-top: -100px; /* Same value as padding-top but negative */
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -92,15 +87,11 @@ header .navbar-nav .nav-link:hover {
     margin-top: 1em;
 }
 
-
-
-.carousel-caption {
-    position: relative;
-    display: inline-block;
+.div.carousel-caption {
+    position: absolute;
+   
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    right: inherit;
-    bottom: inherit;
     transform: translate(-50%, -50%); /* Offset the position by half of the element's width and height */
     width: 50%; /* Full width of the image */
     color: white; /* Text color */
@@ -114,7 +105,7 @@ header .navbar-nav .nav-link:hover {
     margin: 0 auto; /* Center the carousel if it's not full width */
     max-height: 400px; /* Set a maximum height */
     overflow: hidden; /* Prevents images from overflowing the set height */
-    display: block;
+    cursor: pointer;
 }
 
 #enlargedBackdrop {

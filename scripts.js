@@ -1,28 +1,20 @@
-document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default anchor behavior
-
-        const targetId = this.getAttribute(href="#services"); // Get the target ID from href
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 100; // 100px is the navbar height
-            window.scrollTo({
-                top: offsetTop,
-                behavior: "smooth"
-            });
-        }
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for navigation links
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
+    document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: "smooth"
+                    });
+                } else {
+                    console.error('No element found for ID:', targetId);
+                }
+            }
         });
     });
 
@@ -40,45 +32,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation
+    // Form validation and data submission
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        if (form.checkValidity() === false) {
-            event.stopPropagation();
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
         } else {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
             alert(`Thank you, ${name}. We have received your message and will get back to you shortly!`);
+            form.reset();
+            form.classList.remove('was-validated');
+
+            // Define where you want to send the data.
+            const url = 'https://yourserver.com/api/contact';
+
+            // Use fetch API to send the form data
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
         }
-        form.classList.add('was-validated');
-    }, false);
-});
-
-// Define where you want to send the data.
-const url = 'https://yourserver.com/api/contact'; // Change this URL to your actual endpoint
-
-// Create an object to send in JSON format
-const formData = {
-    name: name,
-    email: email,
-    message: message
-};
-
-// Use fetch API to send the form data
-fetch(url, {
-    method: 'POST', // or 'PUT'
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData)
-})
-.then(response => response.json()) // or .text() if you expect a plain response
-.then(data => {
-    console.log('Success:', data);
-})
-.catch((error) => {
-    console.error('Error:', error);
+    });
 });
