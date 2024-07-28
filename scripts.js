@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for navigation links
+    // Select only relevant links for smooth scrolling
     document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            // Check if the href attribute starts with '#'
             if (targetId.startsWith('#')) {
+                e.preventDefault(); // Prevent default only if it's an internal link
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,
+                        top: targetElement.offsetTop - 100, // Adjust for navbar height
                         behavior: "smooth"
                     });
                 } else {
                     console.error('No element found for ID:', targetId);
                 }
             }
+            // If not starting with '#', do nothing special (let external links work normally)
         });
     });
+});
 
     // Toggle service descriptions
     document.querySelectorAll('.service-item').forEach(item => {
