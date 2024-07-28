@@ -39,16 +39,21 @@ header .navbar-nav .nav-link:hover {
 }
 
 .navbar-nav {
-   float: auto;
+    position: relative;
+    flex: right;
+    flex-wrap: wrap;
 }
 
 .nav-item {
     float: auto;
-
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .nav-link {
-    float: right
+    float: right;
+
 }
 
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
