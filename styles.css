@@ -89,11 +89,10 @@ header .navbar-nav .nav-link:hover {
 
 .div.carousel-caption {
     position: absolute;
-   
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 100%; /* Center vertically */
+    left: 100%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset the position by half of the element's width and height */
-    width: 50%; /* Full width of the image */
+    width: 100%; /* Full width of the image */
     color: white; /* Text color */
     text-align: center; /* Center text alignment */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
