@@ -100,9 +100,9 @@ header .navbar-nav .nav-link:hover {
 }
 
 #imageCarousel {
-    width: 50%;  /* Adjust the width as needed */
+    width: 100%;  /* Adjust the width as needed */
     margin: 0 auto; /* Center the carousel if it's not full width */
-    max-height: 400px; /* Set a maximum height */
+    max-height: 800px; /* Set a maximum height */
     overflow: hidden; /* Prevents images from overflowing the set height */
     cursor: pointer;
 }
