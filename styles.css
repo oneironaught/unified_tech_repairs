@@ -39,21 +39,22 @@ header .navbar-nav .nav-link:hover {
 }
 
 .navbar-nav {
-    position: relative;
-    flex: right;
-    flex-wrap: wrap;
+    display: flex; /* Ensures flexbox layout */
+    flex-direction: row; /* Align children horizontally */
+    justify-content: center; /* Center align the items if there's extra space */
+    align-items: center; /* Vertically align items in the middle */
+    width: 100%; /* Take full width to spread out the items */
+    padding-left: 0; /* Remove default padding if any */
 }
 
-.nav-item {
-    float: auto;
-    position: relative;
-    flex-wrap: wrap;
-    flex-direction: row;
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Add some space between items */
 }
 
-.nav-link {
-    float: right;
-
+.navbar-nav .nav-link {
+    display: flex; /* Use flex to align the icon centrally if needed */
+    align-items: center;
+    justify-content: center;
 }
 
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
@@ -163,39 +164,98 @@ header .navbar-nav .nav-link:hover {
 
 /* Media Queries */
 
+/* Media Queries */
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .navbar-nav {
-        margin-right: auto;
+        margin-right: auto;  /* This will align the navbar items to the right */
     }
 }
 
-/* Small devices (landscape phones, less than 768px) */
+/* Small devices (landscape phones, 576px to 768px) */
 @media (max-width: 767.98px) {
     .navbar {
-        font-size: 0.9rem;
+        font-size: 0.9rem;  /* Slightly smaller font size for navigation links */
     }
 
     .service-item {
-        padding: 15px;
+        padding: 15px;  /* More padding for clickable area */
     }
 
     #introduction, #services, #testimonials, #about, #contact {
-        padding: 20px;
+        padding: 20px;  /* Consistent padding for section content */
     }
 
     .display-4 {
-        font-size: 2.5rem;
+        font-size: 2.5rem;  /* Smaller headings in smaller devices */
     }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .navbar-brand {
-        margin-left: 0;
+        margin-left: 0;  /* Align the brand logo properly in very small devices */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;   /* Center-align the nav items */
+        width: 100%;           /* Full width nav items */
     }
 
     .service-item {
-        padding: 10px;
+        padding: 10px;  /* Less padding as space is at a premium */
+    }
+
+    .navbar-toggler {
+        margin-right: 15px;  /* Ensure toggle button is not too close to the edge */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .navbar-nav {
+        margin-right: auto;  /* This will align the navbar items to the right */
+    }
+}
+
+/* Small devices (landscape phones, 576px to 768px) */
+@media (max-width: 767.98px) {
+    .navbar {
+        font-size: 0.9rem;  /* Slightly smaller font size for navigation links */
+    }
+
+    .service-item {
+        padding: 15px;  /* More padding for clickable area */
+    }
+
+    #introduction, #services, #testimonials, #about, #contact {
+        padding: 20px;  /* Consistent padding for section content */
+    }
+
+    .display-4 {
+        font-size: 2.5rem;  /* Smaller headings in smaller devices */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        margin-left: 0;  /* Align the brand logo properly in very small devices */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;   /* Center-align the nav items */
+        width: 100%;           /* Full width nav items */
+    }
+
+    .service-item {
+        padding: 10px;  /* Less padding as space is at a premium */
+    }
+
+    .navbar-toggler {
+        margin-right: 15px;  /* Ensure toggle button is not too close to the edge */
     }
 }
