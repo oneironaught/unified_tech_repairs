@@ -12,54 +12,57 @@ body {
     scroll-behavior: smooth;
 }
 
-header.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
-}
 
-header .navbar-brand {
-    font-weight: bold;
-}
-
-header .navbar-brand img {
-    display: block;
-    margin: 0 auto;
-}
-
-header .navbar-nav .nav-link {
-    color: black;
-}
-
-header .navbar-nav .nav-link:hover {
-    color: #007bff;
-}
-
-.navbar-nav .nav-link:hover, .navbar-nav .nav-item.dropdown:hover .nav-link {
-    color: #007bff; /* Sets the text color on hover */
-}
-
-.navbar-nav {
-    display: flex; /* Ensures flexbox layout */
-    flex-direction: row; /* Align children horizontally */
-    justify-content: center; /* Center align the items if there's extra space */
-    align-items: center; /* Vertically align items in the middle */
-    width: 100%; /* Take full width to spread out the items */
-    padding-left: 0; /* Remove default padding if any */
-}
-
-.navbar-nav .nav-item {
-    margin-right: 10px; /* Add some space between items */
-}
-
-.navbar-nav .nav-link {
-    display: flex; /* Use flex to align the icon centrally if needed */
+/* This styles the nav bar */
+.nav {
+    display: absolute;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding: 3px 0;
+    grid-template-columns: auto;
     align-items: center;
-    justify-content: center;
 }
 
-.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+.nav a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+    transform: scale(1.2); /* Enlarge the link */
     background-color: #007bff; /* Sets the background color on hover for dropdown items */
-    color: white; /* Sets the text color on hover for dropdown items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: black solid transparent;
+    color: #f8f9fa;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
 #home {
@@ -199,9 +202,27 @@ header .navbar-nav .nav-link:hover {
     padding-left: 0; /* Remove default padding if any */
 }
 
-.navbar-brand mr-auto {
-    align-items: center;
-    justify-content: center;
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+    transform: scale(1.2); /* Enlarge the link */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: black solid transparent;
 }
 
 /* Media Queries */
