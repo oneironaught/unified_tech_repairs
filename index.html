@@ -30,56 +30,25 @@
         });
     </script>
 </head>
-<!--Navigation Bar and Social Media Links-->
-    <header class="nav">
-            <a class="navbar-brand mr-auto" href="#" alt="Navigation Menu">
-                <img src="assets/logo_main.jpeg" alt="Unified Tech Repair Logo" height="80">
-            </a>
-        <!-- Navigation Bar-->
-            <nav>
-                <ul class="nav nav-pills">
-                    <li role="presentation"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#services">Services</a></li>
-                    <li role="presentation"><a href="#about">About</a></li>
-                    <li role="presentation"><a href="#testimonials">Testimonials</a></li>
-                    <li role="presentation"><a href="#contact">Contact</a></li>
-                    <li role="presentation"><a href="#inquiries">Inquiries</a></li>
-                </ul>
-            </nav>
-        </div>
-        </div>
-<!-- Social Media Links -->
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link" href="https://x.com/UTRepairs" style="color: lightblue" target="_blank" rel="noopener noreferrer" aria-label="Twitter Logo">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.instagram.com/unifiedtechrepairs" style="color: tomato" target="_blank" aria-label="Instagram Logo">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/profile.php?id=61563138816384" style="color: blue" target="_blank" aria-label="Facebook Logo">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://youtube.com" style="color: red" target="_blank" aria-label="YouTube Logo">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://tiktok.com" style="color: black" target="_blank" aria-label="TikTok Logo">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
-    </li>
-</ul>
-        </div>
-        </div>
-</div>
-    </header>
+<!--Navigation Bar-->
+<nav class="navbar">
+    <div class="container">
+      <!-- Logo Section -->
+      <a href="#" class="navbar-logo">
+        <img src="assets/logo_main.jpeg" alt="Unified Tech Repair Logo" />
+      </a>
+      <br>
+      <!-- Navigation Links -->
+      <ul class="navbar-menu">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#inquiries" class="nav-link">Inquiries</a></li>
+      </ul>
+    </div>
+  </nav>
 <!--Background image top-->
 <body>
     <section id="home" class="text-center py-5">
@@ -96,15 +65,6 @@
             <p class="lead">We specialize in iPhone and Mac computer repairs. Your privacy is our priority.</p>
         </div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -138,7 +98,7 @@
         <br>
         <section id="services" class="text-center py-5 bg-light">
             <div class="container">
-                <p>Here is a list of the Apple devices we specialize in repairing:</p>
+                <h2>We repair the following:</h2>
                 <ol class="list-unstyled">
                     <li>iPhone SE (3rd generation)</li>
                     <li>iPhone 12</li>
@@ -186,9 +146,6 @@
                 </ol>
             </div>
         </section>
-         
-
-
         </li>
 <br>
 <br>
@@ -492,26 +449,23 @@
  <br>
  <br>
 
-    <!-- Contact section for Calendly -->
-    <section id="contact" class="text-center py-5">
-        <div class="container">
-            <h2>Contact</h2>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/unifiedtechrepairs" style="min-width:320px;height:630px;"></div></section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!--Contact section continued for general questions-->    
-    <section id="inquiries" class="text-center py-5">
-        <div class="container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmeNf-qHPBmKVyEnY8Ilavmty7FLMDEjIKVEJxCSvt6GeBlQ/viewform?embedded=true" style="min-width: 320px; height:630px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-    </section>
-<br>
-<br>
+  <!-- Contact section for Calendly -->
+<section id="contact" class="contact-section text-center py-5">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/unifiedtechrepairs" style="min-width:320px;height:630px;"></div>
+    </div>
+</section>
+
+<!-- General Inquiries Section -->
+<section id="inquiries" class="inquiries-section text-center py-5">
+    <div class="container">
+        <h2>Inquiries</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmeNf-qHPBmKVyEnY8Ilavmty7FLMDEjIKVEJxCSvt6GeBlQ/viewform?embedded=true"
+            style="min-width: 320px; height: 630px;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</section>
+</body>
 <br>
 <!--Footer-->
     <footer class="text-center py-5 bg-light">
@@ -551,10 +505,6 @@
         </ul>
             </div>
         </div>
-    </div>
-</div>
 <br><p>&copy; 2024 Unified Tech Repair <br>All rights reserved</p>
 </footer>
-
-</body>
 </html>

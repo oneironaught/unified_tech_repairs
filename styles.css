@@ -12,59 +12,52 @@ body {
     scroll-behavior: smooth;
 }
 
-
-/* This styles the nav bar */
-.nav {
-    display: absolute;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: transparent;
-    padding: 3px 0;
-    grid-template-columns: auto;
-    align-items: center;
-}
-
-.nav a {
+/* Style for the navbar container */
+.navbar {
+    background-color: #f8f9fa; /* White background for the navbar */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd; /* Optional border for a clean look */
+  }
+  
+  /* Flexbox for horizontal layout */
+  .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: black;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Hover effect */
-.nav a:hover {
-    transform: scale(1.2); /* Enlarge the link */
-    background-color: #007bff; /* Sets the background color on hover for dropdown items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: black solid transparent;
-    color: #f8f9fa;
-}
-
-nav ul {
-    list-style-type: none;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between logo and links */
+  }
+  
+  /* Logo styling */
+  .navbar-logo img {
+    height: 200px; /* Set a suitable height for your logo */
+    background-color: transparent; /* No background for the logo */
+    margin-right: 20px; /* Space between logo and menu */
+  }
+  
+  /* Menu items styling */
+  .navbar-menu {
+    display: flex; /* Flexbox for horizontal layout */
+    list-style: none; /* Remove default list styling */
     padding: 0;
     margin: 0;
-    text-align: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
+  }
+  
+  /* Styling for individual nav links */
+  .navbar-menu .nav-link {
+    background-color: #007bff; /* Blue background for the buttons */
+    color: #fff; /* White text */
+    padding: 10px 15px; /* Spacing inside the buttons */
+    margin: 20px 30px;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-decoration: none; /* Remove underlining */
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  /* Hover effect for links */
+  .navbar-menu .nav-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+/* Main Body Content */
 #home {
     background-image: url('assets/logo_top.jpeg');
     max-width: 100%;
@@ -78,9 +71,10 @@ nav ul li a {
 #home .display-4 {
     font-weight: bold;
     margin-top: 3%;
-    padding-top: 400px;
+    padding-top: 250px;
 }
 
+/* Servcies Section */
 #services .col-md-4 {
     margin-bottom: 2em;
     cursor: pointer;
@@ -96,12 +90,13 @@ nav ul li a {
     margin-top: 1em;
 }
 
+/* Images */
 .div.carousel-caption {
     position: absolute;
     top: 100%; /* Center vertically */
     left: 100%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset the position by half of the element's width and height */
-    width: 100%; /* Full width of the image */
+    width: 50%; /* Full width of the image */
     color: white; /* Text color */
     text-align: center; /* Center text alignment */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
@@ -110,7 +105,7 @@ nav ul li a {
 
 #imageCarousel {
     display: flex;
-    width: 100%;  /* Adjust the width as needed */
+    width: 50%;  /* Adjust the width as needed */
     margin: 0 auto; /* Center the carousel if it's not full width */
     max-height: 800px; /* Set a maximum height */
     overflow: hidden; /* Prevents images from overflowing the set height */
@@ -142,6 +137,8 @@ nav ul li a {
     margin-top: 5%;
 }
 
+/* Testimonial section */
+
 #testimonials .carousel-inner {
     margin-top: 2em;
 }
@@ -156,30 +153,27 @@ nav ul li a {
     margin-top: 1em;
 }
 
-#contact {
-    display: flex;
-    flex-direction: column;
-
+/* General styling for the contact and inquiries section */
+.contact-section {
+    background-color: #f8f9fa; /* Light background to separate the section */
 }
 
-#contact .form-control {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
+.inquiries-section {
+    background-color: white;
 }
 
-#contact button {
-    background-color: #007bff;
-    border: none;
-    padding: 0.5em 2em;
-    color: white;
+.contact-section h2, .inquiries-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
 }
 
-#inquiries {
-    display: relative;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+.calendly-inline-widget, iframe {
+    width: 100%; /* Make the widget and iframe responsive */
+    max-width: 900px; /* Set a maximum width for large screens */
+    height: 630px; /* Standard height */
+    margin: 0 auto; /* Center the content */
+    border-radius: 10px; /* Optional: Add slight rounding to the widget/frame */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished look */
 }
 
 .container {
@@ -192,71 +186,118 @@ nav ul li a {
 
 .footer {
     background-color: #f8f9fa;
-    display: absolute; /* Ensures flexbox layout */
-    flex-direction: row; /* Align children horizontally */
-    flex-wrap: wrap;
-    justify-content: center; /* Center align the items if there's extra space */
-    align-items: center; /* Vertically align items in the middle */
-    max-width: 100%; /* Take full width to spread out the items */
-    max-height: auto;
-    padding-left: 0; /* Remove default padding if any */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Horizontally align items */
+    flex-wrap: wrap; /* Wrap items if necessary on smaller screens */
+    justify-content: center; /* Center align items */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Ensure the footer spans the full width */
+    padding: 1px 0; /* Add some padding to control height, not too large */
+    box-sizing: border-box; /* Make sure padding is included in the element size */
 }
 
 .footer-nav {
-    list-style: none;
+    list-style: none; /* Remove bullet points */
     padding: 0;
-    margin: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Ensure the nav items are displayed inline */
+    justify-content: center; /* Center the footer items */
+    flex-wrap: wrap; /* Wrap items to next line on smaller screens */
 }
 
 .footer-item {
-    display: inline-block;
-    margin-right: 15px;
+    margin: 0 10px; /* Adjust margin to control space between items */
 }
 
 .footer-item a {
     text-decoration: none;
     color: #007bff;
+    font-size: 0.9rem; /* Adjust font size for readability */
+    padding: 5px 10px; /* Add a bit of padding for better clickability */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover transitions */
 }
 
 .footer-item a:hover {
     text-decoration: underline;
-    transform: scale(1.2); /* Enlarge the link */
+    transform: scale(1.1); /* Slightly enlarge link on hover, not too big */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: black solid transparent;
+}
+
+.footer p {
+    margin: 10px 0 0; /* Small margin for copyright text */
+    font-size: 0.9rem; /* Adjust text size for readability */
 }
 
 /* Media Queries */
-
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .navbar-brand {
-        margin-left: 0; /* Align the brand logo properly in very small devices */
+    .navbar-logo {
+        margin-left: 0; /* Ensure logo aligns properly on small devices */
     }
 
-    .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically */
+    .navbar-menu {
+        flex-direction: row; /* Stack the nav items vertically */
+        flex-wrap: wrap;
         align-items: center; /* Center-align the nav items */
-        width: 100%; /* Full width nav items */
+        width: 100%; /* Nav items take full width */
     }
 
-    .service-item {
-        padding: 10px; /* Less padding as space is at a premium */
+    .navbar-menu .nav-link {
+        margin: 5px 0; /* Vertical spacing between links */
+        width: 90%; /* Make sure links are not too wide on small devices */
+        text-align: center; /* Center the links */
     }
 
     .navbar-toggler {
-        margin-right: 15px; /* Ensure toggle button is not too close to the edge */
-    }
-}    
-
-
-/* Small devices (landscape phones, 576px to 768px) */
-@media (max-width: 767.98px) {
-    .navbar {
-        font-size: 0.9rem; /* Slightly smaller font size for navigation links */
+        margin-right: 15px; /* Ensure toggle button doesn't touch the edge */
     }
 
     .service-item {
-        padding: 15px; /* More padding for clickable area */
+        padding: 10px; /* Reduce padding on services section for better fit */
+    }
+}
+
+@media (max-width: 575.98px) {
+    #imageCarousel {
+        width: 80%; /* Adjust carousel to take up 80% of the screen */
+        max-height: 300px; /* Set a smaller height on mobile */
+    }
+
+    .carousel-caption {
+        width: 90%; /* Adjust the caption to be narrower */
+        font-size: 0.8rem; /* Reduce the font size for smaller screens */
+        padding: 10px; /* Adjust padding for readability */
+        top: 70%; /* Position caption lower for better fit */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-section h2, .inquiries-section h2 {
+        font-size: 1.5rem; /* Reduce heading size on small screens */
+    }
+
+    .calendly-inline-widget, iframe {
+        height: 500px; /* Reduce height for smaller devices */
+    }
+}
+
+/* Small devices (landscape phones, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .navbar-menu {
+        flex-direction: column; /* Still stack vertically at this size */
+        align-items: center;
+    }
+
+    .navbar-menu .nav-link {
+        padding: 10px 20px; /* Adequate padding for better clickability */
+    }
+
+    .service-item {
+        padding: 15px; /* Increase padding slightly for better readability */
     }
 
     #introduction, #services, #testimonials, #about, #contact {
@@ -264,41 +305,145 @@ nav ul li a {
     }
 
     .display-4 {
-        font-size: 2.5rem; /* Smaller headings in smaller devices */
+        font-size: 2.5rem; /* Adjust header font size for smaller screens */
     }
 }
 
- 
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #imageCarousel {
+        width: 80%; /* Keep carousel at 80% width */
+        max-height: 400px; /* Adjust height slightly for landscape phones */
+    }
+
+    .carousel-caption {
+        width: 85%; /* Adjust the caption to fit the smaller width */
+        font-size: 0.9rem; /* Slightly larger font size than on very small screens */
+        top: 60%; /* Slightly adjust caption position */
+        padding: 15px; /* Add a bit more padding for readability */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .calendly-inline-widget, iframe {
+        height: 550px; /* Adjust height for landscape phones */
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .navbar-nav {
-        margin-right: auto; /* This will align the navbar items to the right */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-menu {
+        flex-direction: row; /* Horizontal layout starts at tablets */
+        margin-right: auto; /* Align the menu items to the left */
+    }
+
+    .navbar-menu .nav-link {
+        margin-left: 10px; /* Space between menu links */
+        padding: 10px 15px;
+    }
+
+    .service-item {
+        padding: 20px; /* Increase padding for larger devices */
+    }
+
+    .display-4 {
+        font-size: 3rem; /* Bigger headings for medium screens */
+    }
+
+    #introduction, #services, #testimonials, #about, #contact {
+        padding: 30px; /* Increase padding for larger tablets */
     }
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #imageCarousel {
+        width: 70%; /* Adjust carousel to be 70% on tablets */
+        max-height: 500px; /* Increase height for tablets */
+    }
 
+    .carousel-caption {
+        width: 70%; /* Adjust caption width for medium screens */
+        font-size: 1rem; /* Larger font for readability */
+        top: 50%; /* Keep caption centered */
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .calendly-inline-widget, iframe {
+        height: 600px; /* Slightly larger height on tablets */
+    }
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .navbar {
-        font-size: 1.1rem; /* Increase the font size for better readability on large screens */
+        font-size: 1.1rem; /* Larger font size for better readability */
+    }
+
+    .navbar-menu {
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: flex-end; /* Align menu items to the right */
     }
 
     .navbar-brand {
-        margin-left: 30px; /* Increase margin for better visual balance */
+        margin-left: 30px; /* Visual spacing for logo */
+    }
+
+    .navbar-menu .nav-link {
+        margin-left: 15px; /* Increase space between links */
+        padding: 10px 20px; /* Larger clickable area for desktop users */
     }
 
     .service-item {
-        padding: 20px; /* More padding to use the additional space effectively */
+        padding: 25px; /* More padding to use extra space on large screens */
     }
 
     .display-4 {
-        font-size: 3rem; /* Larger headers for larger displays */
+        font-size: 3.5rem; /* Larger headers for desktops */
     }
 
     #introduction, #services, #testimonials, #about, #contact {
-        padding: 40px; /* Increase padding for section content for better spacing */
+        padding: 40px; /* Generous padding for content on large screens */
+    }
+}
+
+@media (min-width: 992px) {
+    #imageCarousel {
+        width: 50%; /* Keep carousel at 50% for large screens */
+        max-height: 800px; /* Maintain a larger height for larger displays */
     }
 
+    .carousel-caption {
+        width: 50%; /* Keep caption centered and at 50% width */
+        font-size: 1.2rem; /* Larger font size for desktops */
+        top: 50%; /* Vertically center the caption */
+        padding: 30px; /* Increase padding for spacious layout */
+    }
+}
+
+@media (min-width: 992px) {
+    .calendly-inline-widget, iframe {
+        height: 630px; /* Standard height for larger screens */
+    }
+
+    .contact-section h2, .inquiries-section h2 {
+        font-size: 2.5rem; /* Larger headings for desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: row; /* Stack items vertically on smaller screens */
+        margin: 10px 0; /* Reduce margin for better fit */
+    }
+
+    .footer-item {
+        margin: 10px 0; /* Space out items vertically */
+    }
 }
