@@ -12,49 +12,54 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Style for the navbar container */
+/* Navigation Bar */
 .navbar {
-    background-color: #f8f9fa; /* White background for the navbar */
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd; /* Optional border for a clean look */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0; /* Padding for cleaner look */
+    position: sticky; /* Sticky navigation */
+    top: 0;
+    z-index: 1000;
   }
   
-  /* Flexbox for horizontal layout */
-  .container {
+  /* Logo Styling */
+  .logo-img {
+    width: 150px; /* Adjust size of the logo */
+    height: auto;
+    padding-right: 20px; /* Spacing around logo */
+  }
+  
+  .navbar-logo {
     display: flex;
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    justify-content: center;
   }
   
-  /* Logo styling */
-  .navbar-logo img {
-    height: 200px; /* Set a suitable height for your logo */
-    background-color: transparent; /* No background for the logo */
-    margin-right: 20px; /* Space between logo and menu */
-  }
-  
-  /* Menu items styling */
+  /* Navbar Menu */
   .navbar-menu {
-    display: flex; /* Flexbox for horizontal layout */
-    list-style: none; /* Remove default list styling */
-    padding: 5px 30px;
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end; /* Push the links to the right */
     margin: 0;
+    padding: 0;
   }
   
-  /* Styling for individual nav links */
-  .navbar-menu .nav-link {
-    background-color: #007bff; /* Blue background for the buttons */
-    color: #fff; /* White text */
-    padding: 10px 15px; /* Spacing inside the buttons */
-    margin: 20px 30px;
-    border-radius: 40px; /* Rounded corners for a modern look */
-    text-decoration: none; /* Remove underlining */
-    margin-left: 10px; /* Space between buttons */
+  .navbar-menu li {
+    margin-left: 15px;
   }
   
-  /* Hover effect for links */
-  .navbar-menu .nav-link:hover {
-    background-color: #00a2ff; /* Darker blue on hover */
+  .navbar-menu li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    color: #333; /* Professional color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu li a:hover {
+    color: #007bff; /* Hover color */
   }
   
 /* Main Body Content */
@@ -232,26 +237,28 @@ body {
 /* Media Queries */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .navbar-logo {
-        margin-left: 0; /* Ensure logo aligns properly on small devices */
-    }
-
     .navbar-menu {
-        flex-direction: row; /* Stack the nav items vertically */
-        flex-wrap: wrap;
-        align-items: center; /* Center-align the nav items */
-        width: 100%; /* Nav items take full width */
-    }
-
-    .navbar-menu .nav-link {
-        margin: 5px 0; /* Vertical spacing between links */
-        width: 90%; /* Make sure links are not too wide on small devices */
-        text-align: center; /* Center the links */
-    }
-
-    .navbar-toggler {
-        margin-right: 15px; /* Ensure toggle button doesn't touch the edge */
-    }
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+    
+      .navbar-menu li {
+        margin: 5px 0; /* Reduce margin for extra small screens */
+      }
+    
+      .logo-img {
+        width: 90px; /* Further adjust logo size */
+      }
+    
+      .navbar-menu li a {
+        font-size: 0.9em; /* Reduce font size for extra small screens */
+      }
+    
+      .navbar {
+        padding: 10px 0; /* Adjust padding for small devices */
+      }
 
     .service-item {
         padding: 10px; /* Reduce padding on services section for better fit */
@@ -284,18 +291,28 @@ body {
 
 /* Small devices (landscape phones, 576px to 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .navbar {
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-
     .navbar-menu {
-        flex-direction: column; /* Still stack vertically at this size */
+        flex-direction: column;
         align-items: center;
-    }
-
-    .navbar-menu .nav-link {
-        padding: 10px 20px; /* Adequate padding for better clickability */
-    }
+        justify-content: center;
+        width: 100%;
+      }
+    
+      .navbar-menu li {
+        margin: 8px 0;
+      }
+    
+      .navbar-toggler {
+        margin-left: auto; /* Align toggler to the right */
+      }
+    
+      .logo-img {
+        width: 110px; /* Reduce logo size further for small screens */
+      }
+    
+      .navbar-menu li a {
+        font-size: 1em; /* Adjust font size for smaller screens */
+      }
 
     .service-item {
         padding: 15px; /* Increase padding slightly for better readability */
@@ -332,21 +349,25 @@ body {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     .navbar-menu {
-        flex-direction: row; /* Horizontal layout starts at tablets */
-        margin-right: auto; /* Align the menu items to the left */
-    }
-
-    .navbar-menu .nav-link {
-        margin-left: 10px; /* Space between menu links */
-        padding: 10px 15px;
-    }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+    
+      .navbar-menu li {
+        margin: 10px 0;
+      }
+    
+      .logo-img {
+        width: 130px; /* Adjust logo size for medium screens */
+      }
+    
+      .navbar {
+        padding: 15px 0; /* Adjust padding for medium screens */
+      }
 
     .service-item {
         padding: 20px; /* Increase padding for larger devices */
@@ -415,6 +436,18 @@ body {
 }
 
 @media (min-width: 992px) {
+    .navbar-menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+    
+      .navbar-menu li {
+        margin: 10px 0;
+      }
+
     #imageCarousel {
         width: 50%; /* Keep carousel at 50% for large screens */
         max-height: 800px; /* Maintain a larger height for larger displays */
