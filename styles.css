@@ -10,6 +10,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: black;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -17,7 +18,7 @@ body {
     background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 10px 0; /* Padding for cleaner look */
-    position: fixed; /* Sticky navigation */
+    position: sticky; /* Sticky navigation */
     top: 0;
     z-index: 1000;
   }
@@ -26,7 +27,9 @@ body {
   .logo-img {
     width: 150px; /* Adjust size of the logo */
     height: auto;
-    padding-right: 20px; /* Spacing around logo */
+    padding-right: 25px; /* Spacing around logo */
+    padding-left: 25px;
+    padding-top: 25px;
   }
   
   .navbar-logo {
