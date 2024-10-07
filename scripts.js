@@ -16,7 +16,7 @@ function setupSmoothScrolling() {
                 if (targetElement) {
                     // Scroll smoothly to the target element
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,  // Adjust for navbar height
+                        top: targetElement.offsetTop - 300,  // Adjust for navbar height
                         behavior: "smooth"
                     });
                 } else {
