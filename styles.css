@@ -111,6 +111,7 @@ header {
 }
 
 /* Images */
+
 .div.carousel-caption {
     position: absolute;
     top: 100%; /* Center vertically */
@@ -174,6 +175,19 @@ header {
 }
 
 /* General styling for the contact and inquiries section */
+.home-section {
+    background-color: white;
+}
+
+.about-section {
+    background-color: white;
+
+}
+
+.photos-section {
+    background-color: white;
+}
+
 .contact-section {
     background-color: #f8f9fa; /* Light background to separate the section */
 }
