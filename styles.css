@@ -50,32 +50,35 @@ header {
     justify-content: center;
   }
   
-  /* Navbar Menu */
-  .navbar-menu {
+ /* Navbar Menu */
+.navbar-menu {
     list-style: none;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end; /* Push the links to the right */
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-menu li {
+}
+
+.navbar-menu li {
     margin-left: 15px;
-  }
-  
-  .navbar-menu li a {
+}
+
+/* Underlined Nav Links */
+.navbar-menu li a {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
-    padding: 10px 15px;
-    color: #333; /* Professional color */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-menu li a:hover {
-    color: #007bff; /* Hover color */
-  }
+    padding: 10px 15px; /* Adjust padding for spacing */
+    color: #333; /* Professional text color */
+    text-decoration: underline; /* Underline the text */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.navbar-menu li a:hover {
+    color: #007bff; /* Change text color to blue on hover */
+    text-decoration: underline; /* Keep underline on hover */
+}
   
 /* Main Body Content */
 #home {
@@ -108,6 +111,80 @@ header {
 .service-description {
     display: none;
     margin-top: 1em;
+}
+
+/* General Styling for the Projects Section */
+#projects {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 50px 20px; /* Spacing around the section */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Project Cards */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px; /* Limit width for readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+.project-card img.image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img.image:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.project-card .text {
+    text-align: left;
+    width: 100%;
+}
+
+.project-card .text h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.project-card .text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Links */
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card a:hover {
+    color: #007bff; /* Bootstrap blue */
+    text-decoration: underline;
 }
 
 /* Images */
@@ -174,31 +251,57 @@ header {
     margin-top: 1em;
 }
 
-/* General styling for the contact and inquiries section */
-.home-section {
-    background-color: white;
+/* Background styling for sections using IDs */
+#home {
+    background-color: white; /* White background for the first section */
 }
 
-.about-section {
-    background-color: white;
-
+#about {
+    background-color: #f8f9fa; /* White background for the second section */
 }
 
-.photos-section {
-    background-color: white;
+#who {
+    background-color: white; /* Light gray background for the third section */
 }
 
-.contact-section {
-    background-color: #f8f9fa; /* Light background to separate the section */
+#services {
+    background-color: #f8f9fa; /* White background for the fourth section */
 }
 
-.inquiries-section {
-    background-color: white;
+#devices {
+    background-color: white; /* Light gray background for the fifth section */
 }
 
-.contact-section h2, .inquiries-section h2 {
+#projects {
+    background-color: #f8f9fa; /* White background for the sixth section */
+}
+
+#photos {
+    background-color: white; /* Light gray background for the seventh section */
+}
+
+#testimonials {
+    background-color: #f8f9fa; /* White background for the eighth section */
+}
+
+#contact {
+    background-color: white; /* Light gray background for the ninth section */
+}
+
+#inquiries {
+    background-color: #f8f9fa; /* White background for the tenth section */
+}
+
+/* General section styling */
+section {
+    padding: 60px 20px; /* Adds padding to all sections for spacing */
+}
+
+section h2 {
     font-size: 2rem;
     margin-bottom: 40px;
+    text-align: center;
+    color: #333; /* Consistent heading color */
 }
 
 .calendly-inline-widget, iframe {
@@ -226,8 +329,10 @@ header {
     justify-content: center; /* Center align items */
     align-items: center; /* Vertically align items */
     width: 100%; /* Ensure the footer spans the full width */
-    padding: 1px 0; /* Add some padding to control height, not too large */
-    box-sizing: border-box; /* Make sure padding is included in the element size */
+    padding: 5px 0; /* Reduce padding to make the footer smaller */
+    font-size: 0.85rem; /* Reduce font size for a compact footer */
+    box-sizing: border-box; /* Include padding in size calculation */
+    margin: 0; /* Remove any margin to reduce height further */
 }
 
 .footer-nav {
