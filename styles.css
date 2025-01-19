@@ -148,10 +148,12 @@ header {
 
 /* Images */
 .project-card img.image {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+    max-width: 80%; /* Reduce the width of the images relative to their container */
+    max-height: 200px; /* Set a reasonable height limit */
+    border-radius: 10px; /* Keep the rounded corners */
+    margin-bottom: 15px; /* Maintain spacing below the image */
+    object-fit: cover; /* Ensure images are cropped proportionally if necessary */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .project-card img.image:hover {
