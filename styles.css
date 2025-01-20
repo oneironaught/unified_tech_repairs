@@ -308,7 +308,7 @@ section h2 {
 
 .calendly-inline-widget, iframe {
     width: 100%; /* Make the widget and iframe responsive */
-    max-width: 900px; /* Set a maximum width for large screens */
+    max-width: 1500px; /* Set a maximum width for large screens */
     height: 630px; /* Standard height */
     margin: 0 auto; /* Center the content */
     border-radius: 10px; /* Optional: Add slight rounding to the widget/frame */
