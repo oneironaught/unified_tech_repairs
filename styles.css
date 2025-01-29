@@ -79,7 +79,7 @@ header {
 .navbar-menu li a {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
-    padding: 10px 15px; /* Adjust padding for spacing */
+    padding: 5px 5px; /* Adjust padding for spacing */
     color: #333; /* Professional text color */
     text-decoration: underline; /* Underline the text */
     transition: color 0.3s ease; /* Smooth hover effect */
