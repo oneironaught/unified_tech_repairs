@@ -125,6 +125,7 @@ header {
 }
 
 /* Subscriptions */
+
 #subscriptions .card {
     height: 100%;
     display: flex;
@@ -140,6 +141,26 @@ header {
 #subscriptions .annual {
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+/* Subscription Features */
+
+.bg-blue {
+    background-color: #007bff !important; /* Bootstrap Primary Blue */
+    color: white !important;
+    font-weight: bold;
+}
+
+.bg-silver {
+    background-color: #C0C0C0 !important; /* Silver color */
+    color: black !important; /* Adjust text color for better contrast */
+    font-weight: bold;
+}
+
+.bg-red {
+    background-color: #DC3545 !important; /* Bootstrap Red */
+    color: white !important;
+    font-weight: bold;
 }
 
 /* General Styling for the Projects Section */
